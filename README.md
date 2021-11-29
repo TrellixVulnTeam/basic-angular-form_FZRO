@@ -47,6 +47,14 @@ By following [this exercise](https://github.com/becodeorg/ANT-Lamarr-5.34/tree/m
     * and I added the novalidate property to the form to prevent automatic browser validation
     * I also rearranged my folder structure to ensure the `server` folder gets added tot he repository
     * Mid afternoon commit and push at :clock3: 3:20PM
+    * It took me longer than I care to admit to figure out the issue with console logging upon submit
+      * turns out my method and my form variable had the same name, so the method could not get called
+      * THANKS Jorg and Daryl for letting me Ducksplain through the issues
+    * I tried generating a new service but something had gone wrong along the way and I got an error from angular
+      * so I made a project backup, deleted the remote repository, created a new angular project, copied the files I needed back into the new project and `git init` the whole thing
+      * Somehow the issue got fixed and I now have an `addFriend` service that imports the {httpClient} from angular.
+    * Tomorrow starts at step 15
+    * Final push of day 1 at :clock5: 5:10 PM
 
 ## To Do
 This to do list is for personal use, the full to do list is added at the start of the challenge and as we complete
