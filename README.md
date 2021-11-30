@@ -16,11 +16,11 @@ By following [this exercise](https://github.com/becodeorg/ANT-Lamarr-5.34/tree/m
 
 |  | Description |
 | ----------- | ----------- |
-| ![windows10](basic-angular-form\src\assets\README\windows10-logo.png) | Running Windows 10 |
-| ![vsCode](basic-angular-form\src\assets\README\vscode-logo.png) | Working with PHPStorm as IDE |
-| ![Angular](basic-angular-form\src\assets\README\Angular-logo.png) | Project built with Angular |
-| ![git](basic-angular-form\src\assets\README\git-logo.png) | Using git for version control |
-| ![github](basic-angular-form\src\assets\README\github-logo.png) | Hosting my files on github |
+| ![windows10](./basic-angular-form/src/assets/README/windows10-logo.png) | Running Windows 10 |
+| ![vsCode](./basic-angular-form/src/assets/README/vscode-logo.png) | Working with PHPStorm as IDE |
+| ![Angular](./basic-angular-form/src/assets/README/Angular-logo.png) | Project built with Angular |
+| ![git](./basic-angular-form/src/assets/README/git-logo.png) | Using git for version control |
+| ![github](./basic-angular-form/src/assets/README/github-logo.png) | Hosting my files on github |
 
 ## Timeline
 * Day1 (:date: 29/12/2021)
