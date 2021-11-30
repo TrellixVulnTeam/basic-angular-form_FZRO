@@ -34,8 +34,8 @@ app.post('/', function (request, response) {
 });
 
 app.post('/addFriend', function (request, response){
-    let result = allFriends.push(request.body);
-    response.status(200).send({result});
+    allFriends = allFriends.push(request.body);
+    response.status(200).send({allFriends});
 })
 
 

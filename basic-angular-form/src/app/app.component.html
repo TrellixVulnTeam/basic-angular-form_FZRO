@@ -1,0 +1,62 @@
+{{ friendModel | json }}
+<form #friendForm="ngForm" novalidate (ngSubmit)="onSubmit(friendModel)">
+  <label for="firstName">First name</label>
+  <input
+    id="firstName"
+    name="firstName"
+    type="text"
+    required
+    #firstName="ngModel"
+    [(ngModel)]="friendModel.firstName"
+    [class.invalid]="firstName.invalid && firstName.touched"
+    pattern="[a-zA-Z '-]+"
+  /><br />
+  <label for="lastName">Last name</label>
+  <input
+    type="text"
+    id="lastName"
+    name="lastName"
+    required
+    [(ngModel)]="friendModel.lastName"
+    #lastName="ngModel"
+    [class.invalid]="lastName.invalid && lastName.touched"
+    pattern="[a-zA-Z '-]+"
+  /><br />
+  <label for="email">Email</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    required
+    [(ngModel)]="friendModel.email"
+    #email="ngModel"
+    [class.invalid]="email.invalid && email.touched"
+    pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+  /><br />
+  <label for="phoneNumber">Phone number</label>
+  <input
+    type="text"
+    id="phoneNumber"
+    name="phoneNumber"
+    required
+    [(ngModel)]="friendModel.phoneNumber"
+    #phoneNumber="ngModel"
+    [class.invalid]="phoneNumber.invalid && phoneNumber.touched"
+    pattern="^((\+|00)32\s?|0)4([6789]\d)(\s?\d{2}){3}$"
+  /><br />
+  <label for="language">Select your favorite language</label>
+  <select
+    type="text"
+    id="language"
+    name="language"
+    required
+    [(ngModel)]="friendModel.language"
+    #language="ngModel"
+    [class.invalid]="language.invalid && language.touched"
+  >
+    <option *ngFor="let language of languages" value="{{ language }}">
+      {{ language }}
+    </option>
+  </select>
+  <button [disabled]="friendForm.form.invalid" type="submit">Save</button>
+</form>
