@@ -16,11 +16,11 @@ By following [this exercise](https://github.com/becodeorg/ANT-Lamarr-5.34/tree/m
 
 |  | Description |
 | ----------- | ----------- |
-| ![windows10](src\assets\README\windows10-logo.png) | Running Windows 10 |
-| ![vsCode](src\assets\README\vscode-logo.png) | Working with PHPStorm as IDE |
-| ![Angular](src\assets\README\Angular-logo.png) | Project built with Angular |
-| ![git](src\assets\README\git-logo.png) | Using git for version control |
-| ![github]src\assets\README\github-logo.png) | Hosting my files on github |
+| ![windows10](angular-form\src\assets\README\windows10-logo.png) | Running Windows 10 |
+| ![vsCode](angular-form\src\assets\README\vscode-logo.png) | Working with PHPStorm as IDE |
+| ![Angular](angular-form\src\assets\README\Angular-logo.png) | Project built with Angular |
+| ![git](angular-form\src\assets\README\git-logo.png) | Using git for version control |
+| ![github](angular-form\src\assets\README\github-logo.png) | Hosting my files on github |
 
 ## Timeline
 * Day1 (:date: 29/12/2021)
@@ -55,6 +55,13 @@ By following [this exercise](https://github.com/becodeorg/ANT-Lamarr-5.34/tree/m
       * Somehow the issue got fixed and I now have an `addFriend` service that imports the {httpClient} from angular.
     * Tomorrow starts at step 15
     * Final push of day 1 at :clock5: 5:10 PM
+* Day 2 (:date: 30/11/2021)
+  *  decided to continue using VSCode on Windows 10 for the rest of the week (change it up a bit...)
+  *  First thing, get the `ng serve --port 4500` command out of the way and check if everything still works the way I left it yesterday
+  *  the further along in the exercise I get the more I feel like the steps are really holding my hand.It appears to get easier to understand what is being asked of me.
+  *  I read through step 15, checked the Angular [documentation on http requests](https://angular.io/guide/http) and managed to get things working with only a minimum of errors along the way
+  *  In step 16 of the exercise we got to the server part. It took a few minutes to figure out that I had to specify the method path in the `onSubmit()` function, but it appears to be working as intended now.
+  *  Time for a `git commit` :clock10: at 10AM
 
 ## To Do
 This to do list is for personal use, the full to do list is added at the start of the challenge and as we complete
@@ -70,11 +77,11 @@ objectives they will be moved up into the timeline section and ticked off using 
 2. Visual error reporting (some indication the user made an error) :heavy_check_mark:
 3. Form validation :heavy_check_mark:
 4. A friend list (by sending a get request to the local node server)
-5. A Post request to add to your friend list
+5. A Post request to add to your friend list :heavy_check_mark:
 
 ### Nice to have
-1. Email validation
-2. Phone number validation
+1. Email validation :heavy_check_mark:
+2. Phone number validation :heavy_check_mark:
 3. separate adding friends (the form) from the friend list (the display)
 4. Add some extra fields
    1. profile picture?

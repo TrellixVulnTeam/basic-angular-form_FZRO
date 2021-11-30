@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const { response } = require('express');
 const app = express();
 
-const PORT = 6969;
+const PORT = 9000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}) );
@@ -24,9 +25,18 @@ app.get('/', function (request, response) {
     response.send('Hello from server');
 });
 
+app.get('/allFriends', function (request, response){
+    response.send(allFriends);
+})
+
 app.post('/', function (request, response) {
     response.status(200).send({"message": "Data received"});
 });
+
+app.post('/addFriend', function (request, response){
+    let result = allFriends.push(request.body);
+    response.status(200).send({result});
+})
 
 
 app.listen(PORT, function () {});
