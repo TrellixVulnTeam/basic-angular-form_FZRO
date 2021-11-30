@@ -9,17 +9,40 @@ import { AddFriendService } from './add-friend.service';
 })
 
 export class AppComponent {
-	private addFriendService: AddFriendService;
 
-	constructor(addFriendService: AddFriendService) {
-		this.addFriendService = addFriendService;
+	private languages = ['html','css', 'js', 'php', 'angular', 'ruby', 'python', 'c++', 'c#']
+	private friendModel = new Friend(null, null, null, null, null);
+	private allFriends: any;
+
+	get getLanguages(): string[]{
+		return this.languages;
 	}
 
-	languages = ['html','css', 'js', 'php', 'angular', 'ruby', 'python', 'c++', 'c#']
-	friendModel = new Friend(null, null, null, null, null);
+	get getFriendModel(): Friend{
+		return this.friendModel;
+	}
 
-	onSubmit(friend: Friend) {
-		console.log(friend);
-		this.addFriendService.addFriend(friend).subscribe(data => 'it worked', error => 'it didn\'t work');
+	get getAllFriends(): any {
+		return this.allFriends;
+	}
+
+	constructor(private addFriendService: AddFriendService) {}
+
+	public async showFriends(url:string):Promise<any>{
+		await fetch (url)
+			.then(response => response.json())
+			.then(data => {
+				this.allFriends = data;
+				console.log(this.allFriends)
+			})
+	}
+	
+	onSubmit() {
+		this.addFriendService.addFriend(this.friendModel).subscribe(data => 'it worked', error => 'it didn\'t work');
+		// this.showFriends(this.addFriendService.getUrl);
+	}
+
+	ngOnInit(): any {
+		this.showFriends(this.addFriendService.getUrl);
 	}
 }

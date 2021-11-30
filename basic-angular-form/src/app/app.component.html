@@ -1,5 +1,4 @@
-{{ friendModel | json }}
-<form #friendForm="ngForm" novalidate (ngSubmit)="onSubmit(friendModel)">
+<form #friendForm="ngForm" novalidate (ngSubmit)="onSubmit()">
   <label for="firstName">First name</label>
   <input
     id="firstName"
@@ -7,7 +6,7 @@
     type="text"
     required
     #firstName="ngModel"
-    [(ngModel)]="friendModel.firstName"
+    [(ngModel)]="getFriendModel.firstName"
     [class.invalid]="firstName.invalid && firstName.touched"
     pattern="[a-zA-Z '-]+"
   /><br />
@@ -17,7 +16,7 @@
     id="lastName"
     name="lastName"
     required
-    [(ngModel)]="friendModel.lastName"
+    [(ngModel)]="getFriendModel.lastName"
     #lastName="ngModel"
     [class.invalid]="lastName.invalid && lastName.touched"
     pattern="[a-zA-Z '-]+"
@@ -28,7 +27,7 @@
     id="email"
     name="email"
     required
-    [(ngModel)]="friendModel.email"
+    [(ngModel)]="getFriendModel.email"
     #email="ngModel"
     [class.invalid]="email.invalid && email.touched"
     pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
@@ -39,7 +38,7 @@
     id="phoneNumber"
     name="phoneNumber"
     required
-    [(ngModel)]="friendModel.phoneNumber"
+    [(ngModel)]="getFriendModel.phoneNumber"
     #phoneNumber="ngModel"
     [class.invalid]="phoneNumber.invalid && phoneNumber.touched"
     pattern="^((\+|00)32\s?|0)4([6789]\d)(\s?\d{2}){3}$"
@@ -50,13 +49,28 @@
     id="language"
     name="language"
     required
-    [(ngModel)]="friendModel.language"
+    [(ngModel)]="getFriendModel.language"
     #language="ngModel"
     [class.invalid]="language.invalid && language.touched"
   >
-    <option *ngFor="let language of languages" value="{{ language }}">
+    <option *ngFor="let language of getLanguages" value="{{ language }}">
       {{ language }}
     </option>
   </select>
   <button [disabled]="friendForm.form.invalid" type="submit">Save</button>
 </form>
+
+<div *ngFor="let showFriend of getAllFriends">
+  <table>
+    <td>Friend:</td>
+    <td>{{ showFriend.firstName }} {{ showFriend.lastName }}</td>
+    <tr>
+      <td>Email:</td>
+      <td>{{ showFriend.email }}</td>
+    </tr>
+    <tr>
+      <td>Phone Number:</td>
+      <td>{{ showFriend.phoneNumber }}</td>
+    </tr>
+  </table>
+</div>

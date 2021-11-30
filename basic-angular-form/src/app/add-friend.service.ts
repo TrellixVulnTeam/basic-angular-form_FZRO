@@ -9,13 +9,17 @@ import { Observable } from 'rxjs';
 
 export class AddFriendService {
   private http: HttpClient;
-  private url = 'http://localhost:9000'; 
+  private url = 'http://localhost:9000/allFriends';  //specify the correct path!
+
+  get getUrl(){
+    return this.url;
+  }
 
   constructor(http: HttpClient) {
     this.http = http;
   }
 
   method: any; addFriend(friend: Friend):Observable<Friend> {
-    return this.http.post<Friend>(this.url + '/addFriend', friend) //specify the correct path!
+    return this.http.post<Friend>(this.url, friend) 
   }
 }

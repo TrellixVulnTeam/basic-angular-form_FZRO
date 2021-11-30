@@ -62,6 +62,9 @@ By following [this exercise](https://github.com/becodeorg/ANT-Lamarr-5.34/tree/m
   *  I read through step 15, checked the Angular [documentation on http requests](https://angular.io/guide/http) and managed to get things working with only a minimum of errors along the way
   *  In step 16 of the exercise we got to the server part. It took a few minutes to figure out that I had to specify the method path in the `onSubmit()` function, but it appears to be working as intended now.
   *  Time for a `git commit` :clock10: at 10AM
+  *  got to the point where I can write info to the server and call it back from the server to display something
+  *  still having some weird issue where it doesn't update instantly upon submit
+  *  lunchtime! `git commit` at :clock12: 12:45PM
 
 ## To Do
 This to do list is for personal use, the full to do list is added at the start of the challenge and as we complete
