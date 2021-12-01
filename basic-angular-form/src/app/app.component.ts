@@ -34,12 +34,14 @@ export class AppComponent {
 			.then(data => {
 				this.allFriends = data;
 				console.log(this.allFriends)
+				
 			})
 	}
 	
 	onSubmit() {
 		this.addFriendService.addFriend(this.friendModel).subscribe(data => 'it worked', error => 'it didn\'t work');
-		// this.showFriends(this.addFriendService.getUrl);
+		this.showFriends(this.addFriendService.getUrl);
+		window.location.reload();
 	}
 
 	ngOnInit(): any {

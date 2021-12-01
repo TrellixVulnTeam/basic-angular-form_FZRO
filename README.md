@@ -65,6 +65,11 @@ By following [this exercise](https://github.com/becodeorg/ANT-Lamarr-5.34/tree/m
   *  got to the point where I can write info to the server and call it back from the server to display something
   *  still having some weird issue where it doesn't update instantly upon submit
   *  lunchtime! `git commit` at :clock12: 12:45PM
+*  Day 3 (:date: 01/01/2021)
+   *  This morning I first tried to fix the issue of the instant update on submit
+      *  I tried the first thing that came to mind, refresh the page on submit using `window.location.reload()` in the `onSubmit()` method
+      *  It works! Added bonus, it also empties out the fields after submit.
+   *  first `git commit` of the day at :clock9: 9:40AM
 
 ## To Do
 This to do list is for personal use, the full to do list is added at the start of the challenge and as we complete
@@ -79,7 +84,7 @@ objectives they will be moved up into the timeline section and ticked off using 
    5. a select element for the favorite language
 2. Visual error reporting (some indication the user made an error) :heavy_check_mark:
 3. Form validation :heavy_check_mark:
-4. A friend list (by sending a get request to the local node server)
+4. A friend list (by sending a get request to the local node server) :heavy_check_mark:
 5. A Post request to add to your friend list :heavy_check_mark:
 
 ### Nice to have
