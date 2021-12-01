@@ -6,11 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyFormComponent } from './my-form/my-form.component';
+import { MyListComponent } from './my-list/my-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyFormComponent
+    MyFormComponent,
+    MyListComponent
   ],
   imports: [
     BrowserModule,

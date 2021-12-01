@@ -70,6 +70,9 @@ By following [this exercise](https://github.com/becodeorg/ANT-Lamarr-5.34/tree/m
       *  I tried the first thing that came to mind, refresh the page on submit using `window.location.reload()` in the `onSubmit()` method
       *  It works! Added bonus, it also empties out the fields after submit.
    *  first `git commit` of the day at :clock9: 9:40AM
+   *  I have split up the form and the list into separate components. the functionality remains the same.
+      *  I might come back to this later to clean up the code where possible
+      *  I also played around with [tailwind.css](https://tailwindcss.com/) for the styling
 
 ## To Do
 This to do list is for personal use, the full to do list is added at the start of the challenge and as we complete
@@ -90,7 +93,7 @@ objectives they will be moved up into the timeline section and ticked off using 
 ### Nice to have
 1. Email validation :heavy_check_mark:
 2. Phone number validation :heavy_check_mark:
-3. separate adding friends (the form) from the friend list (the display)
+3. separate adding friends (the form) from the friend list (the display) :heavy_check_mark:
 4. Add some extra fields
    1. profile picture?
    2. Signature move?

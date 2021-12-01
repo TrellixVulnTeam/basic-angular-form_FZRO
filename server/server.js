@@ -37,4 +37,9 @@ app.post('/allFriends', function (request, response) {
     response.send(allFriends);
 })
 
+app.delete('/delFriend', function (request, response) {
+    allFriends.push(request.body);
+    response.send(allFriends);
+})
+
 app.listen(PORT, function () {});

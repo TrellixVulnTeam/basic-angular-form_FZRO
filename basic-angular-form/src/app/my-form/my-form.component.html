@@ -1,1 +1,91 @@
-<p>my-form works!</p>
+<div class="col-span-1">
+  <form
+    #friendForm="ngForm"
+    novalidate
+    (ngSubmit)="onSubmit()"
+    class="grid grid-cols-2 gap-2"
+  >
+    <div class="col">
+      <p><label for="firstName">First name</label></p>
+      <p><label for="lastName">Last name</label></p>
+      <p><label for="email">Email</label></p>
+      <p><label for="phoneNumber">Phone number</label></p>
+      <p><label for="language">Select your favorite language</label></p>
+    </div>
+    <div class="col">
+      <input
+        id="firstName"
+        name="firstName"
+        type="text"
+        required
+        #firstName="ngModel"
+        [(ngModel)]="getFriendModel.firstName"
+        [class.bg-red-200]="firstName.invalid && firstName.touched"
+        pattern="[a-zA-Z '-]+"
+        class="border-solid border-black border"
+      /><br />
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        required
+        [(ngModel)]="getFriendModel.lastName"
+        #lastName="ngModel"
+        [class.bg-red-200]="lastName.invalid && lastName.touched"
+        pattern="[a-zA-Z '-]+"
+        class="border-solid border-black border"
+      /><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        [(ngModel)]="getFriendModel.email"
+        #email="ngModel"
+        [class.bg-red-200]="email.invalid && email.touched"
+        pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+        class="border-solid border-black border"
+      /><br />
+      <input
+        type="text"
+        id="phoneNumber"
+        name="phoneNumber"
+        required
+        [(ngModel)]="getFriendModel.phoneNumber"
+        #phoneNumber="ngModel"
+        [class.bg-red-200]="phoneNumber.invalid && phoneNumber.touched"
+        pattern="^((\+|00)32\s?|0)4([6789]\d)(\s?\d{2}){3}$"
+        class="border-solid border-black border"
+      /><br />
+      <select
+        type="text"
+        id="language"
+        name="language"
+        required
+        [(ngModel)]="getFriendModel.language"
+        #language="ngModel"
+        [class.bg-red-200]="language.invalid && language.touched"
+        class="border-solid border-black border"
+      >
+        <option *ngFor="let language of getLanguages" value="{{ language }}">
+          {{ language }}
+        </option>
+      </select>
+    </div>
+    <div class="col-span-2 flex flex-wrap justify-around content-around">
+      <button
+        [disabled]="friendForm.form.invalid"
+        type="submit"
+        class="
+          px-8
+          py-2
+          border-solid border-black border
+          rounded-full
+          hover:bg-yellow-600
+        "
+      >
+        Save
+      </button>
+    </div>
+  </form>
+</div>
