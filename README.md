@@ -105,3 +105,4 @@ objectives they will be moved up into the timeline section and ticked off using 
    1. a list of people that like PHPStorm
    2. Randomized friend list (20 people)
    3. A list based on age
+6. Delete friend functionality :heavy_check_mark:
