@@ -27,6 +27,9 @@ app.get('/', function (request, response) {
 app.get('/allFriends', function (request, response) {
     response.send(allFriends);
 })
+app.get('/delFriend', function (request, response) {
+    response.send(allFriends);
+})
 
 app.post('/', function (request, response) {
     response.status(200).send({"message": "Data received"});
@@ -37,9 +40,12 @@ app.post('/allFriends', function (request, response) {
     response.send(allFriends);
 })
 
-app.delete('/delFriend', function (request, response) {
-    allFriends.push(request.body);
-    response.send(allFriends);
+app.post('/delFriend', function (request, response) {
+    for (let i=0; i<allFriends.length; i++) {
+        if(request.body.email === allFriends[i].email){
+            allFriends.splice(i, 1);
+        }
+    }
 })
 
 app.listen(PORT, function () {});

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 import { Friend } from './friend';
 import { Observable } from 'rxjs';
 
@@ -8,6 +9,8 @@ import { Observable } from 'rxjs';
 })
 
 export class AddFriendService {
+
+  
   private http: HttpClient;
   private url = 'http://localhost:9000/allFriends';  //specify the correct path!
 
@@ -19,7 +22,11 @@ export class AddFriendService {
     this.http = http;
   }
 
-  method: any; addFriend(friend: Friend):Observable<Friend> {
-    return this.http.post<Friend>(this.url, friend) 
+  addFriend(friend: Friend){
+    return this.http.post(this.url, friend) 
   }
+
 }
+
+
+

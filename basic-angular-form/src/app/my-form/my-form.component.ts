@@ -30,9 +30,7 @@ export class MyFormComponent implements OnInit {
 		await fetch (url)
 			.then(response => response.json())
 			.then(data => {
-				this.allFriends = data;
-				console.log(this.allFriends)
-				
+				this.allFriends = data;				
 			})
 	}
 

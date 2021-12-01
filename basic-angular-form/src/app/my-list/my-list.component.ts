@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Friend } from '../friend';
 import { AddFriendService } from '../add-friend.service';
-
+import { DelFriendService } from '../del-friend.service';
 
 @Component({
   selector: 'app-my-list',
@@ -15,20 +14,24 @@ export class MyListComponent implements OnInit {
 		return this.allFriends;
 	}
 
-
-
-	constructor(private addFriendService: AddFriendService) {}
+	constructor(private addFriendService: AddFriendService, private delFriendService: DelFriendService) {}
 
   public async showFriends(url:string):Promise<any>{
-		await fetch (url)
+		await fetch (url, { headers: { 'Content-Type': 'application/json' }})
 			.then(response => response.json())
 			.then(data => {
 				this.allFriends = data.reverse();
-      
-				console.log(this.allFriends)
-				
       })  
   }
+
+  delete(email: string){
+    const delMail = {
+      email: email
+    }
+    this.delFriendService.delFriend(delMail).subscribe();
+    this.showFriends(this.delFriendService.getUrl);
+  }
+  
 
   ngOnInit() {
     this.showFriends(this.addFriendService.getUrl);

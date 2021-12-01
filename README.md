@@ -73,6 +73,7 @@ By following [this exercise](https://github.com/becodeorg/ANT-Lamarr-5.34/tree/m
    *  I have split up the form and the list into separate components. the functionality remains the same.
       *  I might come back to this later to clean up the code where possible
       *  I also played around with [tailwind.css](https://tailwindcss.com/) for the styling
+   *  Managed to add functionality to delete friends
 
 ## To Do
 This to do list is for personal use, the full to do list is added at the start of the challenge and as we complete
